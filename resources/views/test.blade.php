@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    {{phpinfo()}}
+    {{$result1->u_id}}
+    <br><br>
+    {{$result1->u_email}}
+    <br><br>
+    @forelse ($result2 as $val)
+        {{$val}}<br>
+    @empty
+        값 없음
+    @endforelse
 </body>
 </html>

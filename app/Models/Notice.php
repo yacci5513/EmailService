@@ -6,15 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\softDeletes;
 
-class User extends Model
+class Notice extends Model
 {
     use HasFactory, softDeletes;
 
-    protected $primaryKey = 'u_id';
+    protected $primaryKey = 'n_id';
     public $timestamps = true;
     
     protected $fillable = [
-        'u_email',
-        'u_pw',
+        'u_id',
+        'n_title',
+        'n_content',
     ];
 }
